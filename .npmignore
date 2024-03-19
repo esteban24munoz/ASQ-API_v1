@@ -1,0 +1,6 @@
+*.tgz
+data
+node_modules
+sessions
+static
+views
