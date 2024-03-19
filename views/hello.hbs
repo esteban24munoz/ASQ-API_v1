@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {{!--this comment is not included in the output --}}
+    <h1>Hi, {{user}}</h1>
+
+    <div class="entry">
+        {{!-- truethy means it there is an author, then print --}}
+        {{#if author}}
+        <h1>{{author.firstName}}</h1>
+        {{/if}}
+    </div>
+
+
+
+    <ul class="people_list">
+        {{#each people}}
+            <li>{{people.firstName}}</li>
+            <li>{{people.height}}</li>
+
+        {{/each}}
+    </ul>
+</html>

@@ -1,0 +1,39 @@
+###
+# Create a new user
+POST http://localhost:8000/templates/calculate
+Content-Type: application/x-www-form-urlencoded
+
+lhs=8&rhs=5&op=*
+
+###
+GET http://localhost:8000/templates/hello
+
+###
+GET http://localhost:8000/api/widgets
+
+###
+POST http://localhost:8000/api/widgets
+Content-Type: application/json
+
+{
+  "partNum": 432,
+  "name": "Esteban",
+  "qty": 2,
+  "price": 4.22
+}
+
+###
+
+GET http://localhost:8000/api/widgets/65eb8d29df814c0e810a0ff9
+
+
+###
+PUT http://localhost:8000/api/widgets/
+Content-Type: application/json
+
+{
+  "partNum": 34,
+  "name": "Esteban&Naomi",
+  "qty": 2,
+  "price": 10000
+}
