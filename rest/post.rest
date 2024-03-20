@@ -14,4 +14,19 @@ Content-type: application/json
 }
 
 ###
-GET {{api}}/questions/65fa2b285ef12211b22e1a3f
+GET {{api}}/questions/65fa2b285ef12211b22e1a3f 
+
+###
+PUT {{api}}/questions/65fa5898baf93db8f15c8804
+Content-Type: application/json 
+
+{
+    "_id": "65fa5898baf93db8f15c8804",
+    "summary": "hola amigos, Como estan",
+    "contents": "new question",
+    "author": "Mirna",
+    "likeCount": 1,
+    "created": "2024-03-20T03:31:36.961Z",
+    "edited": "2024-03-20T03:31:36.961Z",
+    "__v": 0
+  }
