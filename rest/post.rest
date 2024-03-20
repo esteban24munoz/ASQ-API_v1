@@ -7,14 +7,14 @@ POST {{api}}/questions
 Content-type: application/json
 
 {
-    "summary": "hola amigos, soy Mickey",
-    "contents": "new question",
-    "author": "esteban1",
+    "summary": "find me test",
+    "contents": "question",
+    "author": "esteban24",
     "likeCount": 1
 }
 
 ###
-GET {{api}}/questions/65fa2b285ef12211b22e1a3f 
+GET {{api}}/questions/65fb27431bd8807cf1ba17b9 
 
 ###
 PUT {{api}}/questions/65fa5898baf93db8f15c8804
