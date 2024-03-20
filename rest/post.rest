@@ -12,3 +12,6 @@ Content-type: application/json
     "author": "esteban1",
     "likeCount": 1
 }
+
+###
+GET {{api}}/questions/65fa2b285ef12211b22e1a3f
