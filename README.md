@@ -15,3 +15,17 @@ This will be a simple web application that allows users to post questions, then 
 - Make an Express error handler that takes all exceptions, then figures out if they were 400s or 500s.
 - Catch all exceptions and hand them off to express.
 - Use router.route(...) to define each end point. You can add a .all option to the end to catch unsupported methods.
+
+# Dependencies (Node Packages used)
+----------------
+- "body-parser": "^1.20.2",
+- "express": "^4.18.3",
+- "express-handlebars": "^7.1.2",
+- "express-session": "^1.18.0",
+- "mongoose": "^8.2.2",
+- "morgan": "^1.10.0"
+# Dev Dependencies
+- "jest": "^29.7.0",
+- "nodemon": "^3.1.0",
+- "winston": "^3.12.0"
+  
