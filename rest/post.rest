@@ -1,4 +1,5 @@
 @api = http://localhost:8000/api
+@id = 65fb27431bd8807cf1ba17b9
 
 GET {{api}}/questions
 
@@ -14,19 +15,24 @@ Content-type: application/json
 }
 
 ###
-GET {{api}}/questions/65fb27431bd8807cf1ba17b9 
+GET {{api}}/questions/{{id}} 
 
 ###
-PUT {{api}}/questions/65fa5898baf93db8f15c8804
+PUT {{api}}/questions/{{id}} 
 Content-Type: application/json 
 
 {
-    "_id": "65fa5898baf93db8f15c8804",
-    "summary": "hola amigos, Como estan",
-    "contents": "new question",
-    "author": "Mirna",
-    "likeCount": 1,
-    "created": "2024-03-20T03:31:36.961Z",
-    "edited": "2024-03-20T03:31:36.961Z",
-    "__v": 0
-  }
+    "summary": "",
+    "contents": "First question",
+    "author": "Estban",
+    "edited": ""
+}
+
+###
+POST {{api}}/questions/{{id}}/answers
+Content-Type: application/json
+
+{
+    "contents": "todo bien, funcion porfa",
+    "author": "Estebna28",
+}
