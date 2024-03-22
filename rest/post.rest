@@ -1,5 +1,5 @@
 @api = http://localhost:8000/api
-@id = 65fb27431bd8807cf1ba17b9
+@id = 65fcd0cea22a894a7188b591
 
 GET {{api}}/questions
 
@@ -8,9 +8,9 @@ POST {{api}}/questions
 Content-type: application/json
 
 {
-    "summary": "find me test",
-    "contents": "question",
-    "author": "esteban24",
+    "summary": "First question",
+    "contents": "What's ur name",
+    "author": "esteban4",
     "likeCount": 1
 }
 
