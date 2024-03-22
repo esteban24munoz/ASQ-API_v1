@@ -1,5 +1,7 @@
 @api = http://localhost:8000/api
-@id = 65fcd0cea22a894a7188b591
+@Q_id = 65fcda082139e33bdaf57750
+
+@A_id = 65fcda4b2b68a2e4d83a16ef
 
 GET {{api}}/questions
 
@@ -8,31 +10,49 @@ POST {{api}}/questions
 Content-type: application/json
 
 {
-    "summary": "First question",
-    "contents": "What's ur name",
+    "summary": "Second question",
+    "contents": "What's a dog",
     "author": "esteban4",
     "likeCount": 1
 }
 
 ###
-GET {{api}}/questions/{{id}} 
+GET {{api}}/questions/{{Q_id}} 
 
 ###
-PUT {{api}}/questions/{{id}} 
+PUT {{api}}/questions/{{Q_id}} 
 Content-Type: application/json 
 
 {
-    "summary": "",
-    "contents": "First question",
-    "author": "Estban",
-    "edited": ""
+    "summary": "Updated Question",
+    "contents": "WORKING!",
+    "author": "Mirna24",
+    "likeCount": 1
 }
 
 ###
-POST {{api}}/questions/{{id}}/answers
+POST {{api}}/questions/{{Q_id}}/answers
 Content-Type: application/json
 
 {
-    "contents": "todo bien, funcion porfa",
-    "author": "Estebna28",
+    "contents": "Also the turtle",
+    "author": "Estea28",
+    "likeCount": 1
 }
+
+###
+GET {{api}}/answers/{{A_id}}
+
+###
+PUT {{api}}/answers/{{A_id}}
+Content-Type: application/json
+
+{
+    "contents": "Cats are cute",
+    "author": "Estebna18",
+    "likeCount": 1
+}
+
+###
+GET {{api}}/questions/{{Q_id}}/answers
+
