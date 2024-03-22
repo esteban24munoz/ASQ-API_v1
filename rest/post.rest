@@ -3,6 +3,8 @@
 
 @A_id = 65fcda4b2b68a2e4d83a16ef
 
+@user = Mirna
+
 GET {{api}}/questions
 
 ###
@@ -30,6 +32,8 @@ Content-Type: application/json
     "likeCount": 1
 }
 
+#----------------ANSWER SECTION------------------------------
+
 ###
 POST {{api}}/questions/{{Q_id}}/answers
 Content-Type: application/json
@@ -55,4 +59,17 @@ Content-Type: application/json
 
 ###
 GET {{api}}/questions/{{Q_id}}/answers
+
+#----------------LIKES SECTION------------------------------
+
+###
+GET {{api}}/likes/{{Q_id}}
+
+###
+POST {{api}}/likes/{{Q_id}}/{{user}}
+Content-Type: application/json
+
+
+###
+DELETE {{api}}/likes/{{Q_id}}
 
