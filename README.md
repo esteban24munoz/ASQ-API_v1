@@ -16,7 +16,7 @@ This will be a simple web application that allows users to post questions, then 
 - Catch all exceptions and hand them off to express.
 - Use router.route(...) to define each end point. You can add a .all option to the end to catch unsupported methods.
 
-# Dependencies (Node Packages used)
+# Dependencies To install (Node Packages used)
 ----------------
 - "body-parser": "^1.20.2",
 - "express": "^4.18.3",
@@ -29,3 +29,11 @@ This will be a simple web application that allows users to post questions, then 
 - "nodemon": "^3.1.0",
 - "winston": "^3.12.0"
   
+# If more time
+- Improve authorization, 
+- better like api functions
+- error handling  
+
+# We feel proud of
+- Question post functions
+- Answers post functions
