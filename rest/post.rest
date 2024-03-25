@@ -1,6 +1,6 @@
 @api = http://localhost:8000/api
 @Q_id = 65fcd0cea22a894a7188b591
-@A_id = 65fcda4b2b68a2e4d83a16ef
+@A_id = 65fcd0cea22a894a7188b591
 @username = esteban4
 @token = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJFc3RlYmFuMjQiLCJhdWQiOiJ0ZXN0Iiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzExMzEwMjQ5LCJleHAiOjE3MTM5MDIyNDl9.i_ZgFqnXY5p__cr6GanUtzH0Q_jBNsZlMYF2ZF3c78Tia7WouPeMhiCogjsu4OxNOgs7iSpGHtxzbLrIDhhrqDMIKavSDk7KM_W1m-XfOacXw8w8JC1QHtozs1KI93Xrohs8ISoyUHK3NzprvC5uzrFeNdHAqXxoaeq1CvTFrvLRP6v_EKBYX_Y_Yn9TXPhSL23pePdXEl2SGllS4VmPVgT4j6weWXVND8-UuyV2XkZehuLJYdtHyC74foTBcMy-GpKcLgu0ErIGZuj8_BdCI2jk3n69MNhNK8wS0p1QnViPwTUGPpiC_tbX8MQPkwwahCvghzv9cZ1uiU9nOLP11w
 
@@ -41,7 +41,7 @@ POST {{api}}/questions/{{Q_id}}/answers
 Content-Type: application/json
 
 {
-    "contents": "Also the turtle",
+    "contents": "Im an answer to la cucaracha",
     "author": "Estea28",
     "likeCount": 0
 }
