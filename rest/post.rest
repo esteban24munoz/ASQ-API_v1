@@ -1,7 +1,7 @@
 @api = http://localhost:8000/api
-@Q_id = 65fcd0cea22a894a7188b591
-@A_id = 65fcd0cea22a894a7188b591
-@username = esteban4
+@Q_id = 660071dc5c9a583da516fac6
+@A_id = 6601ff76720b773747227b7f
+@username = Chicken
 @token = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJFc3RlYmFuMjQiLCJhdWQiOiJ0ZXN0Iiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzExMzEwMjQ5LCJleHAiOjE3MTM5MDIyNDl9.i_ZgFqnXY5p__cr6GanUtzH0Q_jBNsZlMYF2ZF3c78Tia7WouPeMhiCogjsu4OxNOgs7iSpGHtxzbLrIDhhrqDMIKavSDk7KM_W1m-XfOacXw8w8JC1QHtozs1KI93Xrohs8ISoyUHK3NzprvC5uzrFeNdHAqXxoaeq1CvTFrvLRP6v_EKBYX_Y_Yn9TXPhSL23pePdXEl2SGllS4VmPVgT4j6weWXVND8-UuyV2XkZehuLJYdtHyC74foTBcMy-GpKcLgu0ErIGZuj8_BdCI2jk3n69MNhNK8wS0p1QnViPwTUGPpiC_tbX8MQPkwwahCvghzv9cZ1uiU9nOLP11w
 
 
@@ -14,9 +14,9 @@ Content-type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "summary":  "la cucaracha la cucaracha",
-    "contents": "nope",
-    "author": "estbean10",
+    "summary":  "New Authenticated Question",
+    "contents": "I should have unlimented power",
+    "author": "EstebanAdmin",
     "likeCount": 0
 }
 
@@ -41,8 +41,8 @@ POST {{api}}/questions/{{Q_id}}/answers
 Content-Type: application/json
 
 {
-    "contents": "Im an answer to la cucaracha",
-    "author": "Estea28",
+    "contents": "Coccoroco",
+    "author": "chickenNoodle",
     "likeCount": 0
 }
 
