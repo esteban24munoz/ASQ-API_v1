@@ -1,12 +1,15 @@
 @api = http://localhost:8000/api
-@Q_id = 660071dc5c9a583da516fac6
+@Q_id = 6602422fe2c0c6f26a877cb8
 @A_id = 6601ff76720b773747227b7f
-@username = Chicken
-@token = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJFc3RlYmFuMjQiLCJhdWQiOiJ0ZXN0Iiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzExMzEwMjQ5LCJleHAiOjE3MTM5MDIyNDl9.i_ZgFqnXY5p__cr6GanUtzH0Q_jBNsZlMYF2ZF3c78Tia7WouPeMhiCogjsu4OxNOgs7iSpGHtxzbLrIDhhrqDMIKavSDk7KM_W1m-XfOacXw8w8JC1QHtozs1KI93Xrohs8ISoyUHK3NzprvC5uzrFeNdHAqXxoaeq1CvTFrvLRP6v_EKBYX_Y_Yn9TXPhSL23pePdXEl2SGllS4VmPVgT4j6weWXVND8-UuyV2XkZehuLJYdtHyC74foTBcMy-GpKcLgu0ErIGZuj8_BdCI2jk3n69MNhNK8wS0p1QnViPwTUGPpiC_tbX8MQPkwwahCvghzv9cZ1uiU9nOLP11w
+@username = estebanAdmin
+@token = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJlc3RlYmFuQWRtaW4iLCJhdWQiOiJ0ZXN0Iiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzExNDE0MzkwLCJleHAiOjE3MTQwMDYzOTB9.UJhySuFd423lNMUoFBjcnw0TUb7qjw7au8d3INuMV07hoBNRIsT-a51U-LV7p1uK-GY5w4KxccvBy3u1v1gHejU8rK-ms8Pe3NNac91osRiL-2AHC8pQBAGCQ8qhSreIVIqWRDdrRmSClDJgA89MyxQDCCrR3hKQwA0xNnsj0xwgJnHA9haOmwIaLpQET9kH7GMKex1Rj1zPvXV8dyLM1gpq8SH4y6NU8AU8V46KqArd32B8u6YlEbY-FQ8LAEf7I_2CrwCJRyIMHwoMQZmc6eS2J6whPdxz0sI6gIht5Z1WlMygECTJhxcMXF-iCbxM9cAeMrxmOj-Hj5AOv_M4iQ
 
 
 
 GET {{api}}/questions
+Authorization: Bearer {{token}}
+
+#WHAT TO DO WITH LIKE COUNT?
 
 ###
 POST {{api}}/questions
@@ -16,12 +19,12 @@ Authorization: Bearer {{token}}
 {
     "summary":  "New Authenticated Question",
     "contents": "I should have unlimented power",
-    "author": "EstebanAdmin",
-    "likeCount": 0
+    "author": "EstebanAdmin"
 }
 
 ###
 GET {{api}}/questions/{{Q_id}} 
+Authorization: Bearer {{token}}
 
 ###
 PUT {{api}}/questions/{{Q_id}} 
@@ -38,6 +41,7 @@ Content-Type: application/json
 
 ###
 POST {{api}}/questions/{{Q_id}}/answers
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
@@ -66,14 +70,19 @@ GET {{api}}/questions/{{Q_id}}/answers
 
 ###
 GET {{api}}/likes/{{Q_id}}
+Authorization: Bearer {{token}}
 
 ###
 GET {{api}}/likes/{{Q_id}}/{{username}}
+Authorization: Bearer {{token}}
 
 ###
-POST {{api}}/likes/{{Q_id}}/{{username}}
+POST {{api}}/likes/{{Q_id}}/steban22
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 ###
-DELETE {{api}}/likes/{{Q_id}}/{{username}}
+DELETE {{api}}/likes/{{Q_id}}/steban22
+Authorization: Bearer {{token}}
+
 
