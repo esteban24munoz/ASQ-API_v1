@@ -1,88 +1,91 @@
 @api = http://localhost:8000/api
-@Q_id = 6602422fe2c0c6f26a877cb8
-@A_id = 6601ff76720b773747227b7f
-@username = estebanAdmin
-@token = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJlc3RlYmFuQWRtaW4iLCJhdWQiOiJ0ZXN0Iiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzExNDE0MzkwLCJleHAiOjE3MTQwMDYzOTB9.UJhySuFd423lNMUoFBjcnw0TUb7qjw7au8d3INuMV07hoBNRIsT-a51U-LV7p1uK-GY5w4KxccvBy3u1v1gHejU8rK-ms8Pe3NNac91osRiL-2AHC8pQBAGCQ8qhSreIVIqWRDdrRmSClDJgA89MyxQDCCrR3hKQwA0xNnsj0xwgJnHA9haOmwIaLpQET9kH7GMKex1Rj1zPvXV8dyLM1gpq8SH4y6NU8AU8V46KqArd32B8u6YlEbY-FQ8LAEf7I_2CrwCJRyIMHwoMQZmc6eS2J6whPdxz0sI6gIht5Z1WlMygECTJhxcMXF-iCbxM9cAeMrxmOj-Hj5AOv_M4iQ
-
-
+@Q_id = 66035d5c90e1dda88eddff15
+@A_id = 660350f70f23887d2ffefb67
+@username = pepito
+@Admin_token = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJNaXJuYTA1IiwiYXVkIjoidGVzdCIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcxMTQ5NDMwMSwiZXhwIjoxNzE0MDg2MzAxfQ.PDiCKreuI4UzX8CjeHMoQo9sf4hCYqO8VR4mTcXxS8SprvH2QOcf3aAD4YhyJtiTpOS-lZ9h3e44d260VvZK93vRGuQmHO4IKclT16GJHswJaTykN5G2tLKRly7xQL3H8bJVerTnWNpdiaLiwx4-TyspYyr3ehg13UyaJnXs2IluZ6Cy23QLB-tfUAx_uS4OqoKbo1cZf5yL5wyjXhQFouxpVn1Y-jOF-cb7TtFQX4eOkE7saz-kmOOD3akYkM_Edm_AtetHT6r00Qe33C7yurELKos8zWuaE57JebNbOlN28RBmtf7ysDzvHDnRJ4KTN50pmOVr-rnT_XH-B3zEKg
+@User_token = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJlc3RlYmFuIiwiYXVkIjoidGVzdCIsInJvbGVzIjpbXSwiaWF0IjoxNzExNDk1Nzc1LCJleHAiOjE3MTE0OTkzNzV9.ukgKr3eNwZbBrC3oITWydhM3e6hjVWY6KvKU76BIht-ikXza7MH76_Xh7leyFLYXhHYE1lY17maw5v_fuzEjFabYvRaOvtNyj3-AlesB6A8mjYEDicAIr5QXsHOan3HSzpgxGhHFWRaiULVwmyvY26Me-OFyEDe696iUO9W9F6pLzvNJGTZLQkxYWmXG-r3k_CHSiG0_-2xVShk5XKfotPguWYBdcYektc5Fd8t8E27qvVGWJ8TbCTAFz_sNC0dooSKhs1dHGORwiMQh3eN6TGVd24PtPzss_36EcRKsZRbUEbBIf5P74CLAHGoZV6XkfAMjHMFe-iJ8muCWBUw8Jw
 
 GET {{api}}/questions
-Authorization: Bearer {{token}}
-
-#WHAT TO DO WITH LIKE COUNT?
+Authorization: Bearer {{User_token}}
 
 ###
 POST {{api}}/questions
 Content-type: application/json
-Authorization: Bearer {{token}}
+Authorization: Bearer {{User_token}}
 
 {
-    "summary":  "New Authenticated Question",
-    "contents": "I should have unlimented power",
-    "author": "EstebanAdmin"
+    "summary":  "I am an admin",
+    "contents": "whatsappp",
+    "author": "esteban"
 }
 
 ###
 GET {{api}}/questions/{{Q_id}} 
-Authorization: Bearer {{token}}
+Authorization: Bearer {{User_token}}
 
 ###
 PUT {{api}}/questions/{{Q_id}} 
 Content-Type: application/json 
+Authorization: Bearer {{User_token}}
+
 
 {
-    "summary": "Updated Question",
-    "contents": "WORKING!",
-    "author": "Mirna24",
-    "likeCount": 0
+    "summary": "yo soy ese man",
+    "contents": "esteban is majoring in cs",
+    "author": "esteban"
 }
 
 #----------------ANSWER SECTION------------------------------
 
 ###
 POST {{api}}/questions/{{Q_id}}/answers
-Authorization: Bearer {{token}}
+Authorization: Bearer {{Admin_token}}
 Content-Type: application/json
 
 {
-    "contents": "Coccoroco",
-    "author": "chickenNoodle",
-    "likeCount": 0
-}
-
-###
-GET {{api}}/answers/{{A_id}}
-
-###
-PUT {{api}}/answers/{{A_id}}
-Content-Type: application/json
-
-{
-    "contents": "Cats are cute",
-    "author": "Estebna18",
-    "likeCount": 0
+    "contents": "Iam aswering to Mirna",
+    "author": "Esteban"
 }
 
 ###
 GET {{api}}/questions/{{Q_id}}/answers
+Authorization: Bearer {{Admin_token}}
+
+
+###
+GET {{api}}/answers/{{A_id}}
+Authorization: Bearer {{Admin_token}}
+
+
+###
+PUT {{api}}/answers/{{A_id}}
+Content-Type: application/json
+Authorization: Bearer {{Admin_token}}
+
+
+{
+    "contents": "Answer Updated",
+    "author": "Estebna18"
+}
+
 
 #----------------LIKES SECTION------------------------------
 
 ###
 GET {{api}}/likes/{{Q_id}}
-Authorization: Bearer {{token}}
+Authorization: Bearer {{Admin_token}}
 
 ###
 GET {{api}}/likes/{{Q_id}}/{{username}}
-Authorization: Bearer {{token}}
+Authorization: Bearer {{Admin_token}}
 
 ###
-POST {{api}}/likes/{{Q_id}}/steban22
-Authorization: Bearer {{token}}
+POST {{api}}/likes/{{Q_id}}/{{username}}
+Authorization: Bearer {{Admin_token}}
 Content-Type: application/json
 
 ###
-DELETE {{api}}/likes/{{Q_id}}/steban22
-Authorization: Bearer {{token}}
+DELETE {{api}}/likes/{{Q_id}}/{{username}}
+Authorization: Bearer {{Admin_token}}
 
 
